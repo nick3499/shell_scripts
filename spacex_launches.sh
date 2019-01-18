@@ -3,7 +3,7 @@
 # Get specific stats for latest SpaceX mission (unofficial)
 # ISC License (ISC)
 # https://opensource.org/licenses/ISC
-# Copyright © 2018 nick3499
+# Copyright © 2019 nick3499
 
 blob=$(curl -s https://api.spacexdata.com/v3/launches/latest | jq '.')
 ld=$(date +'%a %d %b %Y %r %Z' -d "@$(echo $blob | jq '.launch_date_unix')")
